@@ -37,9 +37,31 @@
     {% block page_header %}
     {% endblock %}
 
-    {% block content %}
+    {% block left-content %}
     {% endblock %}
 
+    {% block right-content %}
+    {% endblock %}
+
+    <div class="container-fluid bg-gradient">
+        <div class="container content-container">
+            <div class="row">
+                <div class="col p-0">
+                    <ul class="navigation text-center">
+                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Home</a></li>
+                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> About</a></li>
+                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Education</a></li>
+                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Experience</a></li>
+                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                
+            </div>
+        </div>
+    </div>
+    
     {% block postload_js %}
     {% endblock %}
 </body>
