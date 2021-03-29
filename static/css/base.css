@@ -54,10 +54,17 @@ ul li a i {
     transition: .25s ease-in-out;
 }
 
+.word-wrap {
+    white-space: pre-line;
+    white-space: -o-pre-wrap;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+}
+
 /*------- Home Page -------*/
 
 .intro-paragraph {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .quarter-width {
@@ -113,7 +120,7 @@ ul li a i {
 }
 
 .skills-section {
-    margin-top: 20px;
+    margin: 65px 0 25px;
 }
 
 .skill {
@@ -139,20 +146,18 @@ ul li a i {
 /*Lower banner*/
 
 .banner {
-    width: 95%;
-    height: 150px;
-    margin: auto;
-    margin-top: 20px;
+    min-height: 150px;
+    margin: 20px auto;
     background-color: #1f2248;
     color: #fafafa;
+    padding: 15px 0;
 }
 
 .lg-border  {
     border: 1px dashed white;
     padding: 13px;
-    font-size: 30px;
+    font-size: 22px;
     border-radius: 50%;
-    margin-right: 10%;
 }
 
 /*-Media queries-*/
@@ -162,11 +167,17 @@ ul li a i {
         text-align: right;
     }
     .intro-paragraph {
-        padding-left: 33%;
+        padding-left: 20%;
         padding-right: 0;
     }
     .quarter-width {
         margin-right: 0;
         margin-left: auto;
+    }
+    .skills-section {
+        margin-top: 25px;
+    }
+    .lg-border  {
+        font-size: 30px;
     }
 }
