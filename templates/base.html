@@ -50,12 +50,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-4 text-right pr-4">
+            <div class="row mt-4 mb-4">
+                <div class="order-2 order-lg-1 col-12 col-md-6 col-lg-4 intro pr-4">
                     {% block left-content %}
                     {% endblock %}
                 </div>
-                <div class="col-4">
+                <div class="order-1 order-lg-2 col-12 col-md-6 col-lg-4">
                     <div class="portrait-container">
                         <img src="{% static 'images/portrait.jpg' %}" alt="portrait" class="portrait">
                         <div class="overlay">
@@ -64,9 +64,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 pl-4 pr-4 m-auto">
+                <div class="order-3 col-12 col-md-6 col-lg-4 pl-4 pr-4 m-auto">
                     {% block right-content %}
                     {% endblock %}
+                </div>
+            </div>
+            <div class="row banner text-center">
+                <div class="col-4 m-auto">
+                    <i class="lg-border fas fa-phone"></i>
+                    Something
+                </div>
+                <div class="col-4 m-auto">
+                    <i class="lg-border fas fa-location-arrow"></i>
+                    Something
+                </div>
+                <div class="col-4 m-auto">
+                    <div class="row">
+                        <div class="col-4"><i class="lg-border far fa-address-book"></i></div>
+                        <div class="col-8 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <h5>Phone</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>+44 7814 664 215</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

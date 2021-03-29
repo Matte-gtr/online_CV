@@ -1,15 +1,15 @@
 /*------- general -------*/
 
 .bg-gradient {
-    height: 100vh;
     background-image: linear-gradient(
     180deg, #ababab, #1f2248);
     padding-top: 6vh;
+    background-attachment: fixed;
 }
 
 .content-container {
     background-color: #fafafa;
-    height: 94vh;
+    min-height: 94vh;
 }
 
 /*-Navbar-*/
@@ -56,10 +56,14 @@ ul li a i {
 
 /*------- Home Page -------*/
 
+.intro-paragraph {
+    margin-top: 50px;
+}
+
 .quarter-width {
     width: 25%;
-    margin-right: 0;
-    border-top: 4px solid #e2bd68;
+    margin-left: 0;
+    border-top: 4px solid #9a6b00;
 }
 
 .portrait-container {
@@ -104,13 +108,8 @@ ul li a i {
 }
 
 .bold-gold {
-    color: #e2bd68;
+    color: #9a6b00;
     font-weight: bold;
-}
-
-.intro-paragraph {
-    padding-left: 33%;
-    margin-top: 50px;
 }
 
 .skills-section {
@@ -126,7 +125,7 @@ ul li a i {
 }
 
 .progress-bar {
-    background-color: #bd8b0d;
+    background-color: #9a6b00;
 }
 
 .social-media {
@@ -135,4 +134,39 @@ ul li a i {
 
 .fab {
     padding: 0 10%;
+}
+
+/*Lower banner*/
+
+.banner {
+    width: 95%;
+    height: 150px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #1f2248;
+    color: #fafafa;
+}
+
+.lg-border  {
+    border: 1px dashed white;
+    padding: 13px;
+    font-size: 30px;
+    border-radius: 50%;
+    margin-right: 10%;
+}
+
+/*-Media queries-*/
+
+@media (min-width: 992px) {
+    .intro {
+        text-align: right;
+    }
+    .intro-paragraph {
+        padding-left: 33%;
+        padding-right: 0;
+    }
+    .quarter-width {
+        margin-right: 0;
+        margin-left: auto;
+    }
 }
