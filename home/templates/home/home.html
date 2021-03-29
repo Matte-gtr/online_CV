@@ -1,5 +1,54 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block left-content %}
 
+{% block left-content %}
+    <h2 class="mt-5 mb-1">Matthew Snell</h2>
+    <p class="bold-gold">Full Stack Developer</p>
+    <hr class="quarter-width">
+    <p class="intro-paragraph">
+        This is a short paragraph about myself, something similar to what you would write in the top portion of your CV.
+        This is where you would sell yourself and make yourself sound like the dogs bollocks. This is more about soft skills than
+        any coding ability or experience.
+    </p>
+{% endblock %}
+
+{% block right-content %}
+    <div class="skills-section">
+        <div class="skill">
+            <h6>HTML</h6>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h6>CSS</h6>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h6>JavaScript</h6>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h6>Python</h6>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h6>VBA</h6>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="social-media text-center">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-instagram-square"></i>
+            {{ data }}
+        </div>
+    </div>
 {% endblock %}
