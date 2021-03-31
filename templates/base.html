@@ -42,12 +42,18 @@
             <div class="row">
                 <div class="col p-0">
                     <ul class="navigation text-center d-none d-md-table">
-                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Home</a></li>
+                        <li class="uppercase inline active"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Home</a></li>
                         <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> About</a></li>
                         <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Education</a></li>
                         <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Experience</a></li>
                         <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Contact</a></li>
                     </ul>
+                    <div class="nav-banner fixed-top">
+                        <div class="menu-button d-md-none">
+                            <div class="burger">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row mt-4 mb-5">
@@ -126,6 +132,22 @@
     </div>
     
     {% block postload_js %}
+        <script>
+            $(document).ready(function() {
+                const menuButton = $('.menu-button');
+                let menuActive = false;
+                
+                $('.menu-button').click(function() {
+                    if(menuActive) {
+                        menuButton.removeClass('expanded');
+                        menuActive = false;
+                    } else {
+                        menuButton.addClass('expanded');
+                        menuActive = true;
+                    }
+                });
+            });
+        </script>
     {% endblock %}
 </body>
 </html>

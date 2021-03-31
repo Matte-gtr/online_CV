@@ -61,6 +61,65 @@ ul li a i {
     word-wrap: break-word;
 }
 
+.active {
+    color: #e6c086;
+}
+
+.nav-banner {
+    width: 100%;
+    background-color: #02073e;
+}
+
+.menu-button {
+    width: 67px;
+    padding: 21px 15px;
+    background-color: #02073e;
+    color: #fafafa;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.burger {
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background-color: #fafafa;
+    margin: 6px;
+    border-radius: 2px;
+    transition: all, .5s ease-in-out;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #fafafa;
+    border-radius: 2px;
+    transition: all, .5s ease-in-out;
+}
+
+.burger::before {
+    transform: translateY(-8px);
+}
+
+.burger::after {
+    transform: translateY(8px);
+}
+
+.menu-button.expanded .burger {
+    background-color: transparent;
+}
+
+.menu-button.expanded .burger::before {
+    transform: rotate(45deg);
+}
+
+.menu-button.expanded .burger::after {
+    transform: rotate(-45deg);
+}
+
 /*------- Home Page -------*/
 
 .intro-paragraph {
@@ -177,6 +236,9 @@ ul li a i {
     .skills-section {
         margin-top: 25px;
     }
+}
+
+@media (min-width: 768px) {
     .lg-border  {
         font-size: 30px;
     }
