@@ -120,6 +120,33 @@ ul li a i {
     transform: rotate(-45deg);
 }
 
+.mobile-menu {
+    background-color: rgba(0,0,0,0.8);
+    color: #fafafa;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    transition: all 1s ease-in-out;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+.mobile-dropdown {
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mobile-li {
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 5%;
+}
+
 /*------- Home Page -------*/
 
 .intro-paragraph {

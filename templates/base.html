@@ -54,6 +54,15 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mobile-menu d-table d-md-none hidden">
+                        <ul class="mobile-dropdown text-center">
+                            <li class="mobile-li uppercase active"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Home</a></li>
+                            <li class="mobile-li uppercase"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> About</a></li>
+                            <li class="mobile-li uppercase"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Education</a></li>
+                            <li class="mobile-li uppercase"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Experience</a></li>
+                            <li class="mobile-li uppercase"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="row mt-4 mb-5">
@@ -135,14 +144,17 @@
         <script>
             $(document).ready(function() {
                 const menuButton = $('.menu-button');
+                const mobileMenu = $('.mobile-menu');
                 let menuActive = false;
                 
                 $('.menu-button').click(function() {
                     if(menuActive) {
                         menuButton.removeClass('expanded');
+                        mobileMenu.addClass('hidden');
                         menuActive = false;
                     } else {
                         menuButton.addClass('expanded');
+                        mobileMenu.removeClass('hidden');
                         menuActive = true;
                     }
                 });
