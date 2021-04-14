@@ -31,7 +31,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>{% block extra_title %}Home{% endblock %} | Title</title>
+    <title>{% block extra_title %}{% endblock %}{{ title|title }} | Matt Snell</title>
 </head>
 <body>
     {% block page_header %}
@@ -41,13 +41,17 @@
         <div class="container content-container pb-1">
             <div class="row">
                 <div class="col p-0">
+
+                    <!--Desktop Navbar-->
                     <ul class="navigation text-center d-none d-md-table">
-                        <li class="uppercase inline active"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Home</a></li>
-                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> About</a></li>
-                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Education</a></li>
-                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Experience</a></li>
-                        <li class="uppercase inline"><a class="plain-link" href="#"><i class="fas fa-caret-down"></i> Contact</a></li>
+                        <li class="uppercase inline {% if title == 'home' %}active{% endif %}"><a class="plain-link" href="{% url 'home' %}"><i class="fas fa-caret-down"></i> Home</a></li>
+                        <li class="uppercase inline {% if title == 'about' %}active{% endif %}"><a class="plain-link" href="{% url 'about' %}"><i class="fas fa-caret-down"></i> About</a></li>
+                        <li class="uppercase inline {% if title == 'education' %}active{% endif %}"><a class="plain-link" href="{% url 'education' %}"><i class="fas fa-caret-down"></i> Education</a></li>
+                        <li class="uppercase inline {% if title == 'experience' %}active{% endif %}"><a class="plain-link" href="{% url 'experience' %}"><i class="fas fa-caret-down"></i> Experience</a></li>
+                        <li class="uppercase inline {% if title == 'contact' %}active{% endif %}"><a class="plain-link" href="{% url 'contact' %}"><i class="fas fa-caret-down"></i> Contact</a></li>
                     </ul>
+
+                    <!--mobile Navbar-->
                     <div class="nav-banner fixed-top">
                         <div class="menu-button d-md-none">
                             <div class="burger">
@@ -56,33 +60,21 @@
                     </div>
                     <div class="mobile-menu d-table d-md-none hidden">
                         <ul class="mobile-dropdown text-center">
-                            <li class="mobile-li uppercase active"><a class="plain-link" href="#">Home</a></li>
-                            <li class="mobile-li uppercase"><a class="plain-link" href="#">About</a></li>
-                            <li class="mobile-li uppercase"><a class="plain-link" href="#">Education</a></li>
-                            <li class="mobile-li uppercase"><a class="plain-link" href="#">Experience</a></li>
-                            <li class="mobile-li uppercase"><a class="plain-link" href="#">Contact</a></li>
+                            <li class="mobile-li uppercase {% if title == 'home' %}active{% endif %}"><a class="plain-link" href="{% url 'home' %}">Home</a></li>
+                            <li class="mobile-li uppercase {% if title == 'about' %}active{% endif %}"><a class="plain-link" href="{% url 'about' %}">About</a></li>
+                            <li class="mobile-li uppercase {% if title == 'education' %}active{% endif %}"><a class="plain-link" href="{% url 'education' %}">Education</a></li>
+                            <li class="mobile-li uppercase {% if title == 'experience' %}active{% endif %}"><a class="plain-link" href="{% url 'experience' %}">Experience</a></li>
+                            <li class="mobile-li uppercase {% if title == 'contact' %}active{% endif %}"><a class="plain-link" href="{% url 'contact' %}">Contact</a></li>
                         </ul>
                     </div>
+
                 </div>
             </div>
             <div class="row mt-4 mb-5">
-                <div class="order-2 order-lg-1 col-12 col-md-6 col-lg-4 intro pr-4">
-                    {% block left-content %}
-                    {% endblock %}
-                </div>
-                <div class="order-1 order-lg-2 col-12 col-md-6 col-lg-4">
-                    <div class="portrait-container">
-                        <img src="{% static 'images/portrait.jpg' %}" alt="portrait" class="portrait">
-                        <div class="overlay">
-                            <div class="top-left-corner"></div>
-                            <div class="bottom-right-corner"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-3 col-12 col-md-6 col-lg-4 pl-4 pr-4 m-auto">
-                    {% block right-content %}
-                    {% endblock %}
-                </div>
+                
+                {% block content %}
+                {% endblock %}
+
             </div>
             <div class="row banner text-center">
                 <div class="col-12 col-md-6 col-lg-4 m-auto py-1">

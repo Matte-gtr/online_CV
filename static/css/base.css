@@ -246,6 +246,28 @@ ul li a i {
     border-radius: 50%;
 }
 
+/* About Page */
+
+.part-1-box {
+    background-color: #1f2248;
+    border-radius: 5px;
+    margin: -5px;
+    margin-bottom: 15px;
+    padding: 5px;
+    outline: 1px solid #fafafa;
+    outline-offset: -5px;
+}
+
+.section-header {
+    color: #b38848;
+}
+
+.card-section {
+    background-color: #ece7df;
+    padding: 5px;
+    margin-top: 5px;
+}
+
 /*-Media queries-*/
 
 @media (min-width: 992px) {
@@ -253,7 +275,7 @@ ul li a i {
         text-align: right;
     }
     .intro-paragraph {
-        padding-left: 20%;
+        padding-left: 8%;
         padding-right: 0;
     }
     .quarter-width {
