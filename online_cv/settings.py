@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'owner',
 ]
 
 MIDDLEWARE = [
@@ -161,9 +162,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Email Settings
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'matt.snell.hm@gmail.co.uk'
-EMAIL_HOST_PASSWORD = os.getenv('GMAIL_PASSWORD')
-EMAIL_USE_TLS = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'matt.snell.hm@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv('GMAIL_PASSWORD')
+DEFAULT_FROM_EMAIL = 'matt.snell.00@hotmail.co.uk'

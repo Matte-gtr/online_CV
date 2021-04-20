@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col-12 text-center mb-4"><h1>Messages</h1></div>
+    {% for message in messages %}
+        {% if message.unread %}
+            <div class="col-12">
+                <div class="card-section">
+                    <a class="unread" href="{% url 'read_message' message.id %}">
+                        <p class="mb-0 date-style">Received: {{ message.date_recieved }}</p>
+                        <span class="pr-5">Sender: {{ message.full_name }}</span><br/>
+                        <span class="pr-5">Email: {{ message.email }}</span>
+                        <div class="delete-right">
+                            <a href="{% url 'delete_message' message.id %}" class=""><div class="btn btn-danger"><i class="far fa-trash-alt"></i></div></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% else %}
+            <div class="col-12">
+                <div class="card-section">
+                    <a class="read" href="{% url 'read_message' message.id %}">
+                        <p class="mb-0 date-style">Received: {{ message.date_recieved }}</p>
+                        <span class="pr-5">Sender: {{ message.full_name }}</span><br/>
+                        <span class="pr-5">Email: {{ message.email }}</span>
+                        <div class="delete-right">
+                            <a href="{% url 'delete_message' message.id %}" class=""><div class="btn btn-danger"><i class="far fa-trash-alt"></i></div></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

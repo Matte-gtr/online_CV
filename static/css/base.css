@@ -266,6 +266,7 @@ ul li a i {
     background-color: #ece7df;
     padding: 5px;
     margin-top: 5px;
+    position: relative;
 }
 
 /*-Contact Form-*/
@@ -285,6 +286,29 @@ ul li a i {
 
 .errorlist {
     margin-bottom: 0;
+}
+
+/*-Profile/Messages-*/
+
+.unread {
+    color: #010101;
+    font-weight: 500;
+}
+
+.read {
+    color: #676767;
+}
+
+.date-style {
+    font-style: italic;
+    color: #677ba5;
+    text-decoration: underline;
+}
+
+.delete-right {
+    position: absolute;
+    bottom: 5px;
+    right: 7px;
 }
 
 /*-Media queries-*/

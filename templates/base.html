@@ -129,6 +129,12 @@
                     </div>
                 </div>
             </div>
+            {% if user.is_authenticated %}
+            <a href="{% url 'account_logout' %}">Logout</a>
+            <a href="{% url 'profile' %}">Messages</a>
+            {% else %}
+            <a href="{% url 'account_login' %}">.</a>
+            {% endif %}
         </div>
     </div>
     
