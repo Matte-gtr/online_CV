@@ -48,9 +48,6 @@ ul li a i {
 .plain-link:hover {
     color: #e2bd68;
     text-decoration: none;
-    border: 1px solid;
-    padding: 11px;
-    padding-right: 15px;
     transition: .25s ease-in-out;
 }
 
